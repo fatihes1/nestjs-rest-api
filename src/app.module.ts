@@ -17,8 +17,14 @@ import { APP_PIPE } from '@nestjs/core';
       useClass: ValidationPipe,
     },
   ],
-  imports: [AuthModule, UserModule, BookmarkModule, PrismaModule, ConfigModule.forRoot({
-    isGlobal: true,
-  })],
+  imports: [
+    AuthModule,
+    UserModule,
+    BookmarkModule,
+    PrismaModule,
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+  ],
 })
 export class AppModule {}
